@@ -15,6 +15,7 @@ class Node:
 class LinkedMap:
     head = None
     tail = None
+    size = 0
         
     def insertStart(self, key, value):
         node = Node(key, value)
@@ -24,6 +25,7 @@ class LinkedMap:
         else:
             node.nextNode = self.head
             self.head = node
+        self.size = self.size + 1
         
     def insertEnd(self, key, value):
         node = Node(key, value)
@@ -32,11 +34,13 @@ class LinkedMap:
         else:
             self.tail.nextNode = node
         self.tail = node
+        self.size = self.size + 1
         
     def insertAt(self, key, value, atNode):
         node = Node(key, value)
         node.nextNode = atNode.nextNode
         atNode.nextNode = node
+        self.size = self.size + 1
         
     def getStart(self):
         return self.head.value
