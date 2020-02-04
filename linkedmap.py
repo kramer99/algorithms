@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Mon Feb  3 11:22:57 2020
-
-@author: kramer
+A linked list with keys as well as values, essentially an ordered map.
 """
 
 class Node:
